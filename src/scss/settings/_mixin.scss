@@ -1,0 +1,31 @@
+@mixin H1($prop-color: $colorDark) {
+	font-family: $fontHeadings;
+	font-size: 48px;
+	line-height: 1.185;
+	font-weight: $regular;
+	color: $prop-color;
+}
+ 
+@mixin H3($prop-color: $colorDark) {
+	font-family: $fontHeadings;
+	font-size: 24px;
+	line-height: 1.185;
+	font-weight: $regular;
+	color: $prop-color;
+}
+
+@mixin Header18($prop-color: $colorDark) {
+	font-family: $fontPrimary;
+	font-size: 20px;
+	line-height: 1.52;
+	font-weight: $regular;
+	color: $prop-color;
+}
+
+@mixin text-descr($prop-color:$colorDscr) {
+	font-family: $fontPrimary;
+	font-size: 14px;
+	line-height: 1.52;
+	font-weight: $regular;
+	color: $prop-color;
+}

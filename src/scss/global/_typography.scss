@@ -1,0 +1,51 @@
+/*============================================================================
+	#Typography
+==============================================================================*/
+html {
+	font-size: 100%;
+}
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: $colorDark;
+	font-family: $fontPrimary;
+	font-size: 15px;
+	line-height: 1.6;
+	font-weight: $regular;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3,
+h3,
+h4,
+h5,
+h6  {
+	font-family: $fontHeadings;
+	font-weight: $bold;
+	margin: 0;
+	color: $colorDark;
+}
+
+h2 {
+	font-size: 32px;
+	line-height: 1.185;
+}
+
+h3 {
+	font-size: 24px;
+	line-height: 1.185;
+}
+
+.typography {
+
+	
+}

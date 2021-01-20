@@ -1,0 +1,232 @@
+/*============================================================================
+	#Front Page
+==============================================================================*/
+.hero {
+
+	height: 940px;
+	overflow: hidden;
+	position: relative;
+
+	&__container {
+		height: 100%;
+	}
+
+	&__row {
+		justify-content: flex-start;
+		align-items: center;
+		height: 100%;
+	}
+
+	&__content {
+		position: relative;
+		z-index: 1;
+	}
+
+	&__image-conteiner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+	}
+
+	&__image {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	&__deco-container {
+		position: absolute;
+		bottom: 0%;
+	}
+}
+
+.hero-content {
+	margin-top: 100px;
+	color: white;
+
+	&__header {
+		position: relative;
+		margin-bottom: 25px;
+		z-index: 1;
+	}
+
+	&__title {
+		color: inherit;
+		font-size: 100px;
+		line-height: 1;
+		letter-spacing: 0.012em;
+	}
+
+	&__subtitle {
+		font-family: $fontHeadings;
+		font-weight: $bold;
+		font-size: 42px;
+		line-height: 1.2;
+		letter-spacing: 0.018em;
+	}
+
+	&__text-content {
+		max-width: 580px;
+		font-size: 18px;
+		line-height: 24px;
+
+		p {
+			margin-top: 0;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__button {
+		margin-top: 30px;
+		position: relative;
+		z-index: 1;
+		display: inline-block;
+		padding: 10px 32px;
+		font-size: 24px;
+		font-family: $fontHeadings;
+		font-weight: $bold;
+		text-decoration: none;
+		text-transform: uppercase;
+		letter-spacing: 0.012em;
+		text-shadow: white 1px 1px 0, white -1px -1px 0, 
+                 white -1px 1px 0, white 1px -1px 0;
+
+		.layer-bg {
+			position: absolute;
+			z-index: -1;
+			top: -35px;
+			left: -10px;
+			width: 245px;
+			height: 106px;
+			fill: #bce4e5;
+			transform: scale(-1,1) rotate(-11deg);
+		}
+	}
+
+	&__header-deco {
+		
+		img {
+			max-width: inherit;
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translate(-60px,-10px);
+			z-index: -1;
+		}
+	}
+
+	
+}
+
+.vendors-grid {
+	margin-left: -30px;
+	margin-right: -30px;
+	// background: #ccc;
+
+	&__item {
+		background: #e6e6e6;
+		width: 335px;
+		height: 335px;
+		margin: 15px;
+		float: left;
+	}
+
+	&__item:nth-child(9) {
+		width: 700px;
+		height: 700px;
+	}
+
+	&__item:nth-child(16) {
+		width: 700px;
+		height: 700px;
+		float: right;
+	}
+
+	&__item-inner {
+		overflow: hidden;
+		height: 100%;
+		width: 100%;
+	}
+
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+.vendor-card {
+	display: block;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	
+	&__avatar {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #323232;
+		opacity: 0;
+		transition: opacity 0.3s;
+	}
+
+	&__name {
+		position: absolute;
+		font-family: $fontHeadings;
+		font-weight: $bold;
+		font-size: 24px;
+		line-height: 1.4;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		z-index: 1;
+		top: 50%;
+		left: 50%;
+		color: white;
+		transform: translate3d(-50%, 50%, 0);
+		opacity: 0;
+		transition: opacity 0.3s, transform 0.3s;
+		text-align: center;
+
+		&::before {
+			position: absolute;
+			content: url('../images/vendor-name-hover-deco.svg');
+			bottom: -24px;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			opacity: 1;
+			transition: opacity 0.2s;
+		}
+
+		// &:hover {
+		// 	&::before {
+		// 		opacity: 1;
+		// 	}
+		// }
+	}
+
+	&:hover {
+
+		&::before {
+			opacity: 0.5;
+		}
+
+		.vendor-card__name {
+			transform: translate3d(-50%, -50%, 0);
+			opacity: 1; 
+		}
+	}
+	
+}

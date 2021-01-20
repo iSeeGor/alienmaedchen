@@ -1,0 +1,92 @@
+/*============================================================================
+	#POPUP
+==============================================================================*/
+.site__popup {
+	display: none;
+}
+
+.popup {
+	max-width: 740px;
+	width: 100%;
+	margin: 0 auto;
+	background: white;
+	position: relative;
+	// padding: 20px;
+	border-radius: 8px;
+	overflow: hidden;
+
+	&__close {
+		position: absolute;
+		top: 10px;
+		right: 20px;
+	}
+}
+
+.popup-login {
+
+	&__container {
+		display: flex;
+	}
+
+	&__brand {
+		max-width: 304px;
+		flex: 0 0 304px;
+
+		background: $colorDark;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		img {
+			margin-bottom: 85px;
+		}
+	}
+
+	&__main {
+		padding: 20px;
+		flex: 1;
+	}
+
+	&__header {
+		max-width: 305px;
+		margin: 0 auto;
+		margin-bottom: 38px;
+	}
+
+	&__title {
+		text-align: center;
+		line-height: 1.1;
+	}
+
+	&__body {
+		max-width: 305px;
+		margin: 0 auto;
+		margin-bottom: 30px;
+	}
+
+	.form-login {
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid $colorGray;
+	}
+
+	.form-login__button  {
+		max-width: 100%;
+		width: 100%;
+	}
+
+	.social-login__button {
+		width: 100%;
+		max-width: 100%;
+		margin-bottom: 10px;
+	}
+
+	&__footer {
+		text-align: center;
+		margin-bottom: 10px;
+
+		* {
+			margin: 0;
+		}
+	}
+}

@@ -1,0 +1,120 @@
+/*============================================================================
+	#Footer
+==============================================================================*/
+.footer {
+	padding: 50px 0 25px;
+	background: $colorPink;
+	font-family: $fontSecondary;
+	letter-spacing: 0.02em;
+
+	&__link {
+		color: $colorDark;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.footer-top {
+	margin-bottom: 76px;
+	
+	&__left {
+		@include col();
+		@include size(3);
+		display: flex;
+		align-items: flex-end;
+	}
+
+	&__right {
+		@include col();
+		@include size(8);
+		display: flex;
+		align-items: flex-end;
+	}
+}
+
+
+
+.footer-main {
+
+	margin-bottom: 33px;
+	
+	&__left {
+		@include col();
+		@include size(3);
+	}
+
+	&__right {
+		@include col();
+		@include size(8)
+	}
+}
+
+.footer-contact {
+	display: flex;
+
+	&__item {
+
+		&:not(:last-child) {
+			margin-right: 45px;
+		}
+	}
+
+	&__link {
+
+		&:not(:last-child){
+			margin-right: 10px;
+			padding-right: 10px;
+			position: relative;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: translateY(-50%);
+				height: 15px;
+				width: 1px;
+				background: $colorDark;
+			}
+		}
+	}
+}
+
+.footer-menu {
+
+	&__list {
+		
+	}
+
+	&__item,
+	&__link {
+		color: $colorDark;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+	}
+}
+
+.footer-information {
+	
+	p {
+		margin: 0 0 0 0;
+	}
+}
+
+.footer-copyright {
+	&__text {
+		font-size: 13px;
+	}
+}

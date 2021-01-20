@@ -1,0 +1,40 @@
+/*============================================================================
+	#Global
+==============================================================================*/
+html {
+	box-sizing: border-box;
+	height: 100%;
+	scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	outline: none;
+}
+
+body {
+	height: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: top;
+}
+
+svg {
+	vertical-align: top;
+}
+
+.link {
+	color: $colorMain;
+	text-decoration: underline;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
