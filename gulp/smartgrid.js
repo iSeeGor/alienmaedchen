@@ -7,8 +7,8 @@ module.exports = function () {
 			filename: "_grid",
 			outputStyle: "scss",
 			container: {
-				maxWidth: "1460px", // фактическая ширина макета + 30px
-				// fields: "60px", // padding контейнера
+				maxWidth: "1490px", // фактическая ширина макета +60px
+				// fields: "30px", // padding контейнера
 			},
 
 			// offset: "30px", // растояние между колонками, 

@@ -2,189 +2,40 @@
 	#Button
 ==============================================================================*/
 .button {
-	padding: 0;
-	margin: 0;
+}
+
+.button-readmore {
+	border: 0;
 	background: none;
-	border: none;
-	box-shadow: none;
-	cursor: pointer;
-	transition: color 0.3s ease;
-
-	&._icon {
-		display: flex;
-		align-items: center;
-	}
-
-	&._wishlist {
-		position: relative;
-
-		&::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			right: 0;
-			width: 12px;
-			height: 12px;
-			background: $colorMain;
-			border: 2px solid #000;
-			border-radius: 100%;
-		}
-	}
-
-	&._icon-right {
-		display: flex;
-		.icon {
-			margin-left: 8px;
-		}
-	}
-
-	&._icon-left{
-		display: flex;
-		.icon {
-			margin-right: 8px;
-		}
-	}
-}
-
-
-.button-primary {
-	font-size: 16px;
-	line-height: 1.52;
-	color: white;
-	display: flex;
-	height: 100%;
-	min-height: 40px;
-	align-items: center;
-	justify-content: center;
-	background: $colorMain;
-	padding: 5px 10px;
-	text-decoration: none;
-	border: none;
-	cursor: pointer;
-	transition: background 0.3s ease,
-				color 0.3s ease;
-
-	fill: white;
-
-	&._icon-right {
-		.icon {
-			margin-left: 8px;
-		}
-	}
-
-	&._icon-left{
-		.icon {
-			margin-right: 8px;
-		}
-	}
-
-	&:hover {
-		background: $colorMainHover;
-	}
-
-	&:disabled {
-		opacity: 0.4;
-		cursor: inherit;
-		background: $colorMain;
-
-		.icon {
-			cursor: inherit;
-		}
-	}
-}
-
-.button-primary._dark {
-	background: $colorDark;
-
-
-	&:hover {
-		background: $colorDarkGrayHover;
-		color: $colorMain;
-		fill: $colorMain;
-	}
-
-	&:disabled {
-		color: $colorDscr;
-		fill: $colorDscr;;
-		background: $colorDarkGray;
-		opacity: 1;
-		
-	}
-}
-
-.button-primary._google,
-.button-primary._facebook {
 	position: relative;
-
-	.icon {
-		position: absolute;
-		left: 10px;
-	}
-}
-
-.button-primary._google {
-	background: #EB4335;
-
-	&:hover {
-	 	background: #9E281E;
-
-	}
-}
-
-.button-primary._facebook {
-	background: #3C5A9A;
-
-	&:hover {
-	 	background: #1B305F;
-
-	}
-}
-
-.button-totop {
-	color: white;
-	fill: white;
+	display: inline-block;
 	text-decoration: none;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 120px;
-	height: 40px;
-	background: $colorDarkGray;
-	transition: color 0.3s ease;
-	flex: 0 0 auto;
+	color: $colorDark;
+	font-family: $fontHeadings;
+	font-weight: $bold;
+	font-size: 24px;
+	letter-spacing: 0.02em;
+	padding: 30px 30px;
+	z-index: 1;
+	
 
-
-	.icon {
-		margin-left: 10px;
+	&:active,
+	&:visited {
+		color: $colorDark;
 	}
 
 	&:hover {
-		color: $colorMain;
-		fill: $colorMain;
+		text-decoration: underline;
 	}
 
-}
-
-.button-burger {
-	fill: white;
-	display: none !important;
-
-	@media (max-width: 1200px) {
-		display: flex !important;
+	&__bg {
+		position: absolute;
+		max-width: inherit;
+		width: 300px;
+		top: 50%;
+		left: 50%;
+		transform: translate(calc(-50% - 12px), calc(-50% - 8px));
+		z-index: -1;
+		// opacity: 0.3;
 	}
-
-	.icon-times {
-		display: none;
-	}
-
-	&._is-active {
-		.icon-times {
-			display: block;
-		}
-
-		.icon-burger {
-			display: none;
-		}
-	}
-
 }
