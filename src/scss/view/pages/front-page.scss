@@ -93,7 +93,7 @@
 		text-transform: uppercase;
 		letter-spacing: 0.012em;
 		text-shadow: white 1px 1px 0, white -1px -1px 0, 
-                 white -1px 1px 0, white 1px -1px 0;
+                 	 white -1px 1px 0,white 1px -1px 0;
 
 		.layer-bg {
 			position: absolute;
@@ -104,6 +104,15 @@
 			height: 106px;
 			fill: #bce4e5;
 			transform: scale(-1,1) rotate(-11deg);
+		}
+
+		&:active,
+		&:visited {
+			color: $colorDark;
+		}
+
+		&:hover {
+			text-decoration: underline;
 		}
 	}
 
