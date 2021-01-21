@@ -174,6 +174,11 @@
 		float: right;
 	}
 
+	&__item:nth-child(23) {
+		width: 700px;
+		height: 700px;
+	}
+
 	&__item-inner {
 		overflow: hidden;
 		height: 100%;
