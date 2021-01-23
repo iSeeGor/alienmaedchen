@@ -430,3 +430,42 @@
 		fill: $colorPink;
 	}
 }
+
+.cta._inner {
+
+	.cta__body {
+		align-items: inherit;
+		justify-content: space-between;
+		padding-bottom: 30px;
+	}
+
+	.cta__media {
+		img {
+			width: 570px;
+		}
+	}
+	
+	.cta__content {
+		padding-top: 60px;
+		padding-bottom: 15px;
+		justify-content: space-between;
+		margin-right: 40px;
+		
+	}
+
+	.cta__button {
+		.layer-bg {
+
+			top: calc(50% + 8px);
+			left: calc(50% - 0px);;
+			width: 300px;
+			height: 130px;
+			fill: #fd7c97;
+			transform: translate(-50%,-50%) rotate(-11deg);
+		}
+	}
+
+	.cta-bg {
+		fill: $colorArctic;
+	}
+}

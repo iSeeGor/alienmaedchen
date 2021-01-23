@@ -1,0 +1,163 @@
+/*============================================================================
+	#Neu Hier Page
+==============================================================================*/
+.new-user-guid-page {
+	overflow: hidden;
+
+	&__content {
+		padding-top: 180px;
+		padding-bottom: 150px;
+		background: url('../images/nue-hier-page-main-bg.jpg') no-repeat;
+		background-position: top center;
+	}
+
+	.cta-section {
+		margin-bottom: 140px;
+	}
+}
+
+.new-user-guide {
+	
+	padding-bottom: 190px;
+
+	&__header {
+		margin-bottom: 80px;
+	}
+
+	&__block-title {
+		text-align: left;
+	}
+
+	&__steps-block {
+		
+
+		.text-card {
+
+			@include col();
+			@include size(6);
+		}
+	}
+
+	&__block-image {
+		@include col();
+		@include size(6);
+		position: relative;
+
+		img {
+			position: absolute;
+		}
+	}
+
+	&__block-num {
+		position: absolute;
+	}
+
+	&__block-num {
+		font-size: 120px;
+		line-height: 1;
+		color: white;
+		font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+	}
+}
+
+.new-user-guide__steps-block._step-one {
+	margin-bottom: 390px;
+
+	.new-user-guide__block-image img {
+		bottom: -20px;
+		left: 120px;
+	}
+
+	.new-user-guide__block-num {
+		bottom: -30px;
+		left: 220px;
+	}
+}
+
+.new-user-guide__steps-block._step-two {
+	margin-bottom: 260px;
+
+	.row {
+		flex-direction: row-reverse;
+	}
+
+	.new-user-guide__block-image img {
+		bottom: 160px;
+		left: 50px;
+	}
+
+	.new-user-guide__block-num {
+		bottom: 150px;
+		left: 240px;
+	}
+}
+
+.new-user-guide__steps-block._step-three {
+	.new-user-guide__block-image img {
+		bottom: -130px;
+		left: 80px;
+		max-width: inherit;
+	}
+
+	.new-user-guide__block-num {
+		bottom: 95px;
+		left: 385px;
+	}
+}
+
+.text-card {
+	
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 25px;
+	}
+
+	&__title {
+		padding-left: 40px;
+		font-size: 32px;
+		text-transform: uppercase;
+		letter-spacing: 0.02em;
+	}
+
+	&__body {
+		border: 1px solid #fb6a88;
+		letter-spacing: 0.02em;
+		padding: 25px 35px;
+	}
+}
+
+.tips-tricks {
+
+	&__header {
+		margin-bottom: 50px;
+	}
+
+	&__block-title {
+		text-align: left;
+	}
+
+	&__body {
+		display: flex;
+	}
+
+	&__item {
+		max-width: 334px;
+		flex: 0 0 334px;
+
+		&:not(:last-child){
+			margin-right: 150px;
+		}
+	}
+
+	&__item-title {
+		font-size: 32px;
+		text-transform: uppercase;
+		letter-spacing: 0.02em;
+		margin-bottom: 20px;
+	}
+
+	&__item-text {
+		margin: 0;
+	}
+}
