@@ -16,6 +16,8 @@ const clean = require('./gulp/clean')();
 const serve = require('./gulp/serve')();
 const watch = require('./gulp/watch')();
 
+const createdocs = require('./gulp/docs')();
+
 const grid = require('./gulp/smartgrid')();
 
 
@@ -35,6 +37,8 @@ $.gulp.task('dev', $.gulp.series(
         'fonts',
     )
 ));
+
+$.gulp.task('docs', $.gulp.series('del-docs', 'create-docs'));
 
 
 $.gulp.task('build', $.gulp.series(
@@ -57,4 +61,5 @@ $.gulp.task('default', $.gulp.series(
         'browser-sync'
     )
 ));
+
 
