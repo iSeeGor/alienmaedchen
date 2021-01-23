@@ -1,0 +1,76 @@
+/*============================================================================
+	#Uber Das Portal Page
+==============================================================================*/
+.portal-page {
+
+	&__content {
+		padding-top: 185px;
+		padding-bottom: 150px;
+		background: url('../images/uder-das-portal-page-main-bg.jpg') repeat;
+		background-position: top center;
+	}
+}
+
+.post-list {
+
+	&__header {
+		margin-bottom: -60px;
+	}
+
+	&__block-title {
+		text-align: left;
+	}
+}
+
+.post-item {
+	display: flex;
+	flex-wrap: nowrap;
+	margin-bottom: 140px;
+	
+	&._full {
+		@include col();
+		@include size(12);
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%;
+		align-items: flex-end;
+
+		.post-item__text-card {
+			@include col();
+			@include size(6);
+		}
+
+		.post-item__media {
+			@include col();
+			@include size(6);
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	&._half {
+		@include col();
+		@include size(6);
+	}
+
+	&._reversed {
+		flex-direction: row-reverse;
+	}
+
+}
+
+.post-item:first-child {
+	margin-bottom: 260px;
+}
+
+.text-card {
+
+	&__date {
+		font-family: $fontHeadings;
+		font-size: 32px;
+		font-weight: $bold;
+		margin-left: 30px;
+		letter-spacing: .02em;
+		line-height: 1.185;
+	}
+}
