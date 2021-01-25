@@ -59,11 +59,45 @@
 
 		&._search {
 			margin: 0 -10px;
+
+			.menu__link::before { display: none; }
+
 		}
 
 		&._login {
 			.icon {
 				margin-right: 8px;
+			}
+		}
+
+		&._account {
+
+		}
+	}
+
+	&__link {
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: -4px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 70px;
+			height: 8px;
+			background: url('../images/vendor-name-hover-deco.svg') no-repeat;
+			background-size: cover;
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+			transition: opacity 0.3s, visibility 0.3s;
+		}
+
+		&:hover {
+			&::before {
+				opacity: 1;
+				visibility: visible;
 			}
 		}
 	}
