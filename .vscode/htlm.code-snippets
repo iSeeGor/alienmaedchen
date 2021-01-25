@@ -21,7 +21,7 @@
 		"prefix": "@m",
 		"body": [
 			"@include _$1 {",
-			"$2",
+			"    $2",
 			"}",
 		],
 		"description": "Media Queries Mixin"

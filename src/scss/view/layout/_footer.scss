@@ -23,14 +23,24 @@
 	&__left {
 		@include col();
 		@include size(4);
+		@include size-xl(3);
+		@include size-sm(12);
+
 		display: flex;
 		align-items: flex-end;
 		padding-left: 120px;
+
+		@include _1490 {
+			padding-left: 0px;
+		}
 	}
 
 	&__right {
 		@include col();
 		@include size(7);
+		@include size-xl(9);
+		@include size-sm(12);
+
 		display: flex;
 		align-items: flex-end;
 	}
@@ -45,12 +55,20 @@
 	&__left {
 		@include col();
 		@include size(4);
+		@include size-xl(3);
+		@include size-sm(12);
 		padding-left: 120px;
+
+		@include _1490 {
+			padding-left: 0px;
+		}
 	}
 
 	&__right {
 		@include col();
-		@include size(7)
+		@include size(7);
+		@include size-xl(9);
+		@include size-sm(12);
 	}
 }
 
@@ -119,5 +137,76 @@
 	&__text {
 		padding-left: 120px;
 		font-size: 13px;
+
+		@include _1490 {
+			padding-left: 0;
+		}
+	}
+}
+
+
+@include _1240 {
+	
+	.footer-contact {
+		flex-wrap: wrap;
+
+		&__item {
+			margin-top: 20px;
+		}
+	}
+}
+
+@include _768 {
+	
+	.footer {
+
+		&__logo {
+			margin: 0 auto;
+			margin-bottom: 20px;
+		}
+
+		&__information {
+			text-align: center;
+		}
+	}
+
+	.footer-top {
+		margin-bottom: 40px;
+	}
+
+	.footer-contact {
+
+		justify-content: center;
+
+		&__item {
+			flex: 1 1 100%;
+			max-width: inherit;
+			text-align: center;
+
+			&:not(:last-child){
+				margin-right: 0;
+			}
+		}
+	}
+
+	.footer-menu {
+		margin-bottom: 32px;
+	
+		&__list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		&__item {
+			margin-right: 20px;
+		}
+	}
+	
+	.footer-copyright {
+
+		&__text {
+			text-align: center;
+		}
 	}
 }

@@ -13,22 +13,25 @@ module.exports = function () {
 
 			// offset: "30px", // растояние между колонками, 
 
-			// breakPoints: {
-			// 	lg: {
-			// 		width: "1440px",
-			// 		fields: "20px",
-			// 	},
-			// 	md: {
-			// 		width: "1210px",
-			// 		fields: "10px"
-			// 	},
-			// 	sm: {
-			// 		width: "720px"
-			// 	},
-			// 	xs: {
-			// 		width: "576px"
-			// 	}
-			// },
+			breakPoints: {
+				xl: {
+					width: "1490px"
+				},
+				lg: {
+					width: "1240px"
+					// fields: "20px",
+				},
+				md: {
+					width: "1000px"
+					// fields: "10px"
+				},
+				sm: {
+					width: "768px"
+				},
+				xs: {
+					width: "580px"
+				}
+			},
 		};
 
 		return function grid(done){
