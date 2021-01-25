@@ -29,3 +29,34 @@
 	font-weight: $regular;
 	color: $prop-color;
 }
+
+@mixin _1490 {
+    @media (max-width: 1490px){
+        @content;
+    }
+}
+@mixin _1240 {
+    @media (max-width: 1240px){
+        @content;
+    }
+}
+@mixin _1000 {
+    @media (max-width: 1000px){
+        @content;
+    }
+}
+@mixin _768 {
+    @media (max-width: 768px){
+        @content;
+    }
+}
+@mixin _480 {
+    @media (max-width: 480px){
+        @content;
+    }
+}
+@mixin _350{
+    @media (max-width: 350px){
+        @content;
+    }
+}

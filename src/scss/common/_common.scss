@@ -5,10 +5,23 @@
 	position: relative;
 	max-width: 1920px;
 	margin: 0 auto;
+	overflow: hidden;
 }
 
 .container {
 	@include wrapper();
+	@include _1490 {
+		max-width: 1200px;
+	}
+	@include _1240 {
+		max-width: 960px;
+	}
+	@include _1000 {
+		max-width: 760px;
+	}
+	@include _768 {
+		max-width: 570px;
+	}
 }
 
 .row {
