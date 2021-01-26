@@ -34,15 +34,18 @@
 		margin-right: 0;
 		width: 100%;
 		align-items: flex-end;
+		flex-wrap: wrap;
 
 		.post-item__text-card {
 			@include col();
 			@include size(6);
+			@include size-md(12);
 		}
 
 		.post-item__media {
 			@include col();
 			@include size(6);
+			@include size-md(12);
 			display: flex;
 			justify-content: center;
 		}
@@ -51,6 +54,7 @@
 	&._half {
 		@include col();
 		@include size(6);
+		@include size-md(12);
 	}
 
 	&._reversed {
@@ -72,5 +76,76 @@
 		margin-left: 30px;
 		letter-spacing: .02em;
 		line-height: 1.185;
+	}
+}
+
+@include _1490 {
+	
+	.portal-page {
+
+		&__content {
+			padding-top: 110px;
+    		padding-bottom: 80px;
+		}
+	}
+
+	.post-list {
+		margin-bottom: 40px;
+
+		&__header {
+
+			margin-bottom: 60px;
+		}
+	}
+	
+	.post-item,
+	.post-item:first-child {
+		margin-bottom: 100px;
+	}
+}
+
+@include _1000 {
+	
+	.post-item._full {
+
+		.post-item__media {
+			margin-bottom: 30px;
+			order: -1;
+		}
+	}
+}
+
+@include _768 {
+	
+	.text-card {
+	
+		&__header {
+
+			flex-direction: column;
+		}
+
+		&__date {
+
+			margin-top: 5px;
+			font-size: 24px;
+			margin-left: 0;
+			padding-left: 40px;
+		}
+	}
+}
+
+@include _480 {
+
+	.post-item, .post-item:first-child {
+
+		margin-bottom: 60px;
+	}
+	
+	.text-card {
+	
+		&__date,
+		&__title {
+			padding-left: 0;
+		}
 	}
 }

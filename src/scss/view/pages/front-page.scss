@@ -611,8 +611,15 @@
 			width: 100%;
 			height: 82%;
 			bottom: 0;
-			background: $colorPink;
+			background: $colorArctic;
 			clip-path: polygon(0 0, 100% 6%, 98% 100%, 2% 100%);
+		}
+	}
+
+	.cta-section._front-page {
+
+		.cta::before {
+			background: $colorPink;
 		}
 	}
 }
