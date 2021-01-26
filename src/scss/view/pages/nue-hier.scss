@@ -9,6 +9,12 @@
 		padding-bottom: 150px;
 		background: url('../images/nue-hier-page-main-bg.jpg') no-repeat;
 		background-position: top center;
+
+		@include _1240 {
+			
+			padding-top: 90px;
+			padding-bottom: 110px;
+		}
 	}
 
 	.cta-section {
@@ -35,12 +41,16 @@
 
 			@include col();
 			@include size(6);
+			@include size-md(12);
+			
 		}
 	}
 
 	&__block-image {
+
 		@include col();
 		@include size(6);
+		@include size-md(12);
 		position: relative;
 
 		img {
@@ -147,6 +157,10 @@
 
 		&:not(:last-child){
 			margin-right: 150px;
+
+			@include _1490 {
+				margin-right: 90px;
+			}
 		}
 	}
 
@@ -159,5 +173,177 @@
 
 	&__item-text {
 		margin: 0;
+	}
+}
+
+@include _1240 {
+	
+	.new-user-guide__steps-block._step-one {
+
+		margin-bottom: 220px;
+		.new-user-guide__block-image img {
+    		left: 30px;
+		}
+
+		.new-user-guide__block-num {
+			bottom: -35px;
+    		left: 160px;
+		}
+	}
+
+	.new-user-guide__steps-block._step-two {
+
+		margin-bottom: 220px;
+		.new-user-guide__block-image img {
+			bottom: 70px;
+    		left: -20px;
+		}
+
+		.new-user-guide__block-num {
+			bottom: 50px;
+    		left: 200px;
+		}
+	}
+
+	.new-user-guide__steps-block._step-three {
+
+		.new-user-guide__block-image img {
+			left: 30px;
+		}
+	}
+
+	.cta._inner .cta__content {
+		margin-right: 0;
+	}
+	
+	.page .cta {
+		max-width: 620px;
+	}
+}
+
+@include _1240 {
+
+	.tips-tricks__body {
+		flex-wrap: wrap;
+	}
+
+	.tips-tricks__item {
+		max-width: 100%;
+		flex: 0 0 100%;
+		
+	}
+	
+	.tips-tricks__item:not(:last-child) {
+
+		margin-right: 0;
+		margin-bottom: 60px;
+	}
+
+	.cta._inner .cta__content {
+		padding-top: 10px;
+	}
+}
+
+@include _1000 {
+	
+	.new-user-guide__steps-block {
+	
+		.text-card {
+			order: 2;
+		}
+	}
+
+	.new-user-guide__block-image {
+		order: 1;
+		margin-bottom: 60px;
+
+		img {
+
+			position: static;
+		}
+	}
+
+	.new-user-guide__steps-block._step-one,
+	.new-user-guide__steps-block._step-two {
+		margin-bottom: 160px;
+	}
+
+	.new-user-guide__steps-block._step-one .new-user-guide__block-image {
+		position: relative;
+		text-align: right;
+
+		.new-user-guide__block-num {
+
+			left: auto;
+			right: 200px;
+			bottom: -15px;
+		}
+		
+	}
+
+	.new-user-guide__steps-block._step-two .new-user-guide__block-num {
+		bottom: -20px;
+    	left: 290px;
+	}
+
+	.new-user-guide__steps-block._step-three .new-user-guide__block-num {
+		bottom: 239px;
+		left: 295px;
+	}
+    
+}
+
+@include _768 {
+	
+	.new-user-guide__steps-block._step-three .new-user-guide__block-image {
+
+		img {
+			max-width: 100%;
+			transform: translateX(120px);
+		}
+	}
+
+	.new-user-guide__steps-block._step-three .new-user-guide__block-num {
+		bottom: 135px;
+		left: 295px;
+	}
+}
+
+@include _580 {
+
+	.new-user-guide__steps-block._step-three .new-user-guide__block-image {
+
+		img {
+			max-width: 100%;
+			transform: translateX(50px);
+		}
+	}
+}
+
+@include _480 {
+	
+	.new-user-guide {
+
+		&__block-num {
+			font-size: 100px;
+		}
+	}
+
+	.text-card {
+		
+		&__body {
+			padding: 25px 25px;
+		}
+	}
+
+	.new-user-guide__steps-block._step-two .new-user-guide__block-num {
+		bottom: -20px;
+    	left: 50%;
+	}
+
+	.new-user-guide__steps-block._step-three .new-user-guide__block-num {
+		bottom: 80px;
+		left: auto;
+		right: 60px;
 	}
 }

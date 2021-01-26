@@ -15,9 +15,9 @@ const mobileMenu = () => {
 	function menuToggle(){
 		
 		if($('.js-menu').hasClass('_opened')){
-			$('.js-menu').removeClass('_opened');
+			$('.js-menu').removeClass('_opened').slideUp();
 		} else {
-			$('.js-menu').addClass('_opened');
+			$('.js-menu').addClass('_opened').slideDown();
 		}
 
 	}

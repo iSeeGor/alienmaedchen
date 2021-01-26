@@ -140,9 +140,58 @@
 	
 	padding: 90px 0 140px;
 
+	@include _580 {
+		
+		padding: 90px 0 90px;
+	}
+
 	&__pagination {
 		display: flex;
 		justify-content: center;
 		padding: 25px 0 25px;
+	}
+}
+
+@include _1240 {
+	
+	.deco-head {
+		
+		&__title {
+			font-size: 80px;
+		}
+
+		&__subtitle {
+
+			font-size: 36px;
+		}
+
+		&__deco {
+
+			img {
+				width: 520px;
+			}
+		} 
+	}
+}
+
+@include _580 {
+	
+	.deco-head {
+		
+		&__title {
+			font-size: 70px;
+		}
+
+		&__subtitle {
+
+			font-size: 32px;
+		}
+
+		&__deco {
+
+			img {
+				width: 460px;
+			}
+		} 
 	}
 }
