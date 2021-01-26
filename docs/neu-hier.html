@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="format-detection" content="telephone=no">
 	<title>Alienmaedchen</title>
@@ -57,7 +57,7 @@
 								<a href="#" class="menu__link">Der Shop</a>
 							</li>
 							<li class="menu__item _login">
-								<a href="#" class="menu__link">
+								<a href="#popup-login" class="menu__link js-popup">
 									<svg class="icon _lock">
 										<use xlink:href="symbol/sprite.svg#lock"></use>
 									</svg>
@@ -345,6 +345,51 @@
 				</div>
 			</div>
 		</footer>
+
+		<div class="site__popup">
+
+	<div class="popup-login" id="popup-login">
+		<div class="popup-login__container">
+
+			<header class="popup-login__header">
+				<div class="popup-login__logo">
+					<img src="images/alienmaedchen-logo.png" alt="">
+				</div>
+				<div class="popup-login__header-msg">
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum magna aliquyam erat, sed diam voluptua. 
+				</div>
+				<button class="popup-close js-popup-close"><span>х</span></button>
+			</header>
+
+			<div class="popup-login__body">
+				<div class="popup-login__form">
+					<div class="popup-login__form-title">Einloggen um Alienmaedchen zu werden</div>
+					
+					<form class="form popup-form" autocomplete="off">
+						<div class="form__row">
+							<input class="input" type="text" name="popup-form-user-name" id="popup-form-user-name" placeholder="Benutzername">
+						</div>
+						<div class="form__row">
+							<input class="input" type="password" name="popup-form-password" id="popup-form-password" placeholder="Passwort">
+						</div>
+						<div class="form__row">
+							<button class="form__button">Login</button>
+							<a class="form__paswrd-rst-link" href="#">Passwort Vergessen?</a>
+						</div>
+					</form>
+
+					<div class="popup-login__reg-container">
+						<div class="popup-login__reg-title">Noch keinen Account?</div>
+						<a class="popup-login__reg-link" href="#">kostenlos registrieren</a>
+					</div>
+				</div>
+				<div class="popup-login__media">
+					<img src="images/demo/popup-media-image.jpg" alt="" class="popup-login__image">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 	</div>
 
 	<script src="js/vendor.js"></script>
@@ -352,8 +397,3 @@
 	</body>
 
 </html>
-
-<div class="site__popup">
-
-	
-</div>

@@ -1,7 +1,26 @@
 $(function() {
-    
+
+
+	popupInit();
 	mobileMenu();
 });
+
+const popupInit = () => {
+
+	$('.js-popup').magnificPopup({
+		type: 'inline',
+		preloader: false,
+		modal: true,
+		// closeOnContentClick: true,
+		// closeBtnInside: false,
+	});
+
+	// Close Popup
+	$(document).on('click', '.js-popup-close', function (e) {
+		e.preventDefault();
+		$.magnificPopup.close();
+	});
+}
 
 const mobileMenu = () => {
 
