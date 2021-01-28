@@ -1,9 +1,28 @@
 $(function() {
 
-
+	accordion();
 	popupInit();
 	mobileMenu();
 });
+
+const accordion = () => {
+
+	$(".accordion-item__header").on("click", function () {
+	    if ($(this).hasClass("_active")) {
+	        $(this).removeClass("_active");
+	        $(this)
+	            .siblings(".accordion-item__body")
+	            .slideUp(200);
+	    } else {
+	        $(".accordion-item__header").removeClass("_active");
+	        $(this).addClass("_active");
+	        $(".accordion-item__body").slideUp(200);
+	        $(this)
+	            .siblings(".accordion-item__body")
+	            .slideDown(200);
+	    }
+	});
+}
 
 const popupInit = () => {
 

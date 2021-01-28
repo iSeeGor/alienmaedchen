@@ -1,0 +1,159 @@
+/*============================================================================
+	#FAQ
+==============================================================================*/
+.faq-page {
+	
+	&__main {
+		padding-top: 55px;
+		padding-bottom: 150px;
+		background: url('../images/faq-page-bg.jpg') no-repeat;
+		background-position: top center;
+	}
+
+	.main__container {
+		margin-bottom: 80px;
+	}
+
+	.main__content {
+		margin-bottom: 50px;
+	}
+}
+.accordion {
+
+	&__item {
+		&:not(:last-child){
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.accordion-item {
+	// padding: 28px 38px;
+	border: 1px solid #fb6a88;
+
+	&__header {
+		position: relative;
+		padding: 28px 55px 28px 38px;
+
+		@include _480 {
+			padding-left: 20px;
+		}
+	}
+
+	&__title {
+		font-size: 32px;
+		line-height: 1;
+		white-space: normal;
+		text-transform: uppercase;
+		letter-spacing: 0.02em;
+
+		@include _480 {
+			font-size: 26px;
+		}
+	}
+
+	&__button {
+		position: absolute;
+		top: 24px;
+    	right: 13px;
+		height: 40px;
+		width: 40px;
+		border: 0;
+		background: transparent;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+
+		@include _480 {
+			top: 22px;
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			width: 14px;
+			height: 2px;
+			background: $colorDark;
+			position: absolute;
+		}
+
+		&::after {
+			transform: rotate(90deg);
+			transition: transform 0.2s;
+		}
+	}
+
+	&__body {
+		display: none;
+		padding: 0 38px 0 38px;
+		margin-top: -10px;
+		// margin-bottom: -13px;
+		@include _480 {
+			padding-left: 20px;
+		}
+	}
+
+	&__text-content {
+		letter-spacing: 0.02em;
+
+		p {
+			margin: 0 0 25px 0;
+
+			@include _480 {
+				font-size: 13px;
+			}
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+		color: $colorDark;
+		font-family: $fontHeadings;
+		text-transform: uppercase;
+		font-size: 32px;
+		line-height: 1;
+		letter-spacing: 0.02em;
+		font-weight: $bold;
+		padding: 12px 55px;
+		display: inline-block;
+		position: relative;
+		z-index: 1;
+		margin-bottom: 18px;
+
+		@include _480 {
+			font-size: 24px;
+		}
+
+
+		.layer-bg {
+			fill: #fd7c97;
+			position: absolute;
+			top: calc(50% + 8px);
+			left: 50%;
+			transform: translate(-50%,-50%) rotate(-12deg);
+			z-index: -1;
+
+			@include _480 {
+				width: 250px;
+			}
+		}
+
+		&:visited {
+			color: $colorDark;
+		}
+
+		&:active,
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.accordion-item__header._active {
+
+	.accordion-item__button::after {
+		transform: rotate(0);
+	}
+}
