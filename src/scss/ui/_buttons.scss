@@ -39,3 +39,32 @@
 		// opacity: 0.3;
 	}
 }
+
+.button-deco {
+	position: relative;
+	font-family: $fontHeadings;
+	font-weight: $bold;
+	letter-spacing: 0.02em;
+	text-decoration: none;
+	position: relative;
+	color: $colorDark;
+	font-size: 32px;
+
+	&:visited {
+		color: $colorDark;
+	}
+
+	&:hover,
+	&:active {
+		text-decoration: underline;
+	}
+
+	.layer-bg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%) rotate(-13deg);
+		fill: $colorPink;
+		z-index: -1;
+	}
+}

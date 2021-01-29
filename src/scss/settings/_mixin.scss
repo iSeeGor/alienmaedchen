@@ -30,6 +30,16 @@
 	color: $prop-color;
 }
 
+@mixin Heding() {
+	font-family: $fontHeadings;
+    font-weight: $bold;
+    line-height: 1.2;
+	font-size: 32px;
+	color: $colorDark;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
 @mixin _1490 {
     @media (max-width: 1490px){
         @content;
