@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>Alienmaedchen</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!--== Preload Fonts -->
+	<link rel="preload" href="fonts/AmaticSC-Bold.woff2" as="font" type="font/woff" crossorigin="">
+	<link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff" crossorigin="">
+
+	<!--== favicon  -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="stylesheet" href="css/vendor.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="body">
+	<div class="site">
+
+		<header class="site__header header">
+			<div class="container">
+				<div class="header__row">
+					<div class="header__logo header-logo">
+						<a href="/" class="header-logo__link"><img src="images/alienmaedchen-logo.png" alt="" class="header-logo__image" width="64"></a>
+					</div>
+					<nav class="header__menu menu js-menu">
+						<ul class="menu__list list">
+							<li class="menu__item">
+								<a href="/" class="menu__link">Home</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Neu hier?</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Über das Portal / News</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">FAQ</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Private Diary</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Der Shop</a>
+							</li>
+							<li class="menu__item _login">
+								<a href="#popup-login" class="menu__link js-popup">
+									<svg class="icon _lock">
+										<use xlink:href="symbol/sprite.svg#lock"></use>
+									</svg>
+									Diary Login
+								</a>
+							</li>
+							<li class="menu__item _search">
+								<a href="#" class="menu__link">
+									<svg class="icon _search">
+										<use xlink:href="symbol/sprite.svg#search"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="menu__item _account">
+								<a href="#" class="menu__link accoutn-link">
+									werde Alienmaedchcen
+									<svg class="accoutn-link__bg">
+										<use xlink:href="symbol/sprite.svg#layer-deco-secondary"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+						<div class="menu__deco menu-deco">
+							<svg class="menu-deco__bg">
+								<use xlink:href="symbol/sprite.svg#layer-deco-primary"></use>
+							</svg>
+						</div>
+					</nav>
+					<div class="burger-button js-burger">
+						<svg>
+							<defs>
+								<filter id="gooeyness">
+								<feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="blur" />
+								<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="gooeyness" />
+								<feComposite in="SourceGraphic" in2="gooeyness" operator="atop" />
+								</filter>
+							</defs>
+						</svg>
+						<svg class="burger-icon" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+							<path class="line line1" d="M 50,65 H 70 C 70,65 75,65.198488 75,70.762712 C 75,73.779026 74.368822,78.389831 66.525424,78.389831 C 22.092231,78.389831 -18.644068,-30.508475 -18.644068,-30.508475" />
+							<path class="line line2" d="M 50,35 H 70 C 70,35 81.355932,35.300135 81.355932,25.635593 C 81.355932,20.906215 78.841706,14.830508 72.881356,14.830508 C 35.648232,14.830508 -30.508475,84.322034 -30.508475,84.322034" />
+							<path class="line line3" d="M 50,50 H 30 C 30,50 12.288136,47.749959 12.288136,60.169492 C 12.288136,67.738339 16.712974,73.305085 40.677966,73.305085 C 73.791674,73.305085 108.47458,-19.915254 108.47458,-19.915254" />
+							<path class="line line4" d="M 50,50 H 70 C 70,50 81.779661,50.277128 81.779661,36.607372 C 81.779661,28.952694 77.941689,25 69.067797,25 C 39.95532,25 -16.949153,119.91525 -16.949153,119.91525" />
+							<path class="line line5" d="M 50,65 H 30 C 30,65 17.79661,64.618439 17.79661,74.152543 C 17.79661,80.667556 25.093813,81.355932 38.559322,81.355932 C 89.504001,81.355932 135.59322,-21.186441 135.59322,-21.186441" />
+							<path class="line line6" d="M 50,35 H 30 C 30,35 16.525424,35.528154 16.525424,24.152542 C 16.525424,17.535987 22.597755,13.559322 39.40678,13.559322 C 80.617882,13.559322 94.067797,111.01695 94.067797,111.01695" />
+							</svg>
+							<svg class="burger-x" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+							<path class="line" d="M 34,32 L 66,68" />
+							<path class="line" d="M 66,32 L 34,68" />
+						</svg>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="site__page page profile-page">
+			<header class="profile-page__header pp-header">
+				<div class="pp-header__container container">
+					<div class="pp-header__user-head-gallery user-head-gallery">
+						<div class="user-head-gallery__item">
+							<img src="images/demo/user-square-image-1.jpg" alt="">
+						</div>
+						<div class="user-head-gallery__item">
+							<img src="images/demo/user-square-image-2.jpg" alt="">
+						</div>
+						<div class="user-head-gallery__item">
+							<img src="images/demo/user-square-image-3.jpg" alt="">
+						</div>
+					</div>
+					<div class="pp-header__deco-heading deco-heading">
+						<h1 class="deco-heading__title">Mayrlee On Tour</h1>
+						<div class="deco-heading__subtitle">Eventuell weitere Details</div>
+						<img class="deco-heading__bg" src="images/page-header-deco.svg" alt="" width="615">
+					</div>
+					<img class="pp-header__clouds-deco" src="images/layer-clouds-secondary.png" alt="" >
+				</div>
+			</header>
+			
+			<main class="profile-page__main pp-main">
+				<div class="pp-main__container container">
+					<div class="pp-main__row">
+						<div class="pp-main__content _main">
+							<div class="user-posts">
+								<div class="user-posts__list">
+									<div class="user-posts__item">
+										<article class="post-card _textonly">
+											<div class="post-card__inner">
+												<div class="post-card__date">
+													05/08
+													<span class="_year">2020</span>
+												</div>
+												<div class="post-card__content">
+													<h2 class="post-card__title">Das kann eine Headline sein zum Blogbeitrag</h2>
+													<p class="post-card__excerpt">
+														Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+													</p>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="user-posts__item">
+										<article class="post-card _photo">
+											<header class="post-card__header">
+												<h2 class="post-card__title">Membername</h2>
+												<div class="post-card__date">21/04/2021</div>
+											</header>
+											<figure class="post-card__media">
+												<span class="post-card__badge">NEW</span>
+												<img src="images/demo/user-image-1.jpg" alt="">
+												<figcaption class="post-card__media-text">Das kann eine Headline sein zum Bild sein</figcaption>
+											</figure>
+										</article>
+									</div>
+									<div class="user-posts__item">
+										<article class="post-card _audio">
+											<div class="post-card__inner">
+												<div class="post-card__type">
+													<span class="icon-play"></span>
+												</div>
+												<div class="post-card__content">
+													<h2 class="post-card__title">Membername</h2>
+													<div class="post-card__date">14/12/2020</div>
+												</div>
+												<div class="post-card__track">
+													
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="user-posts__item">
+										<article class="post-card _price">
+											<div class="post-card__inner">
+												<div class="post-card__media">
+													<img src="images/demo/user-image-square-small-1.jpg" alt="" class="post-card__image">
+												</div>
+												<div class="post-card__content">
+													<h2 class="post-card__title">Neues Höschen</h2>
+													<p class="post-card__excerpt">
+														Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, sequi minus nulla laborum, illum earum eveniet quaerat quisquam libero laboriosam ratione est ut facere, voluptas dolorem totam voluptatibus voluptates dolore.
+													</p>
+													<a class="post-card__link button-deco" href="#">
+														NUR 15,- €
+														<svg class="layer-bg">
+															<use xlink:href="symbol/sprite.svg#button-deco-second"></use>
+														</svg>
+													</a>
+
+													<div class="post-card__desrc">Jetzt kaufen in unserem Shop</div>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="user-posts__item">
+										<article class="post-card _textonly">
+											<div class="post-card__inner">
+												<div class="post-card__date">
+													05/08
+													<span class="_year">2020</span>
+												</div>
+												<div class="post-card__content">
+													<h2 class="post-card__title">Das kann eine Headline sein zum Blogbeitrag</h2>
+													<p class="post-card__excerpt">
+														Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+													</p>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="user-posts__item">
+										<article class="post-card _photo">
+											<header class="post-card__header">
+												<h2 class="post-card__title">Membername</h2>
+												<div class="post-card__date">21/04/2021</div>
+											</header>
+											<figure class="post-card__media">
+												<span class="post-card__badge">NEW</span>
+												<img src="images/demo/user-image-1.jpg" alt="">
+												<figcaption class="post-card__media-text">Das kann eine Headline sein zum Bild sein</figcaption>
+											</figure>
+										</article>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="pp-main__content _secondary">
+							<div class="user-info">
+								<h2 class="user-info__block-title">Profil</h2>
+
+								<div class="user-info__content">
+									<div class="user-info__row">
+										<div class="user-info__head">Vorname</div>
+										<div class="user-info__descr">Mary</div>
+									</div>
+									<div class="user-info__row">
+										<div class="user-info__head">Geschlecht</div>
+										<div class="user-info__descr">weiblich</div>
+									</div>
+									<div class="user-info__row">
+										<div class="user-info__head">Alter</div>
+										<div class="user-info__descr">24</div>
+									</div>
+									<div class="user-info__row">
+										<div class="user-info__head">Beziehungsstatus</div>
+										<div class="user-info__descr">ledig</div>
+									</div>
+									<div class="user-info__row">
+										<div class="user-info__head">Sexuelle Orientierung</div>
+										<div class="user-info__descr">Heterosexuell</div>
+									</div>
+									<div class="user-info__row">
+										<div class="user-info__head">PLZ/Land</div>
+										<div class="user-info__descr">34*** / Deutschland</div>
+									</div>
+									<div class="user-info__row">
+										<div class="user-info__head">Sprachen</div>
+										<div class="user-info__descr">Deutsch, English, Spanisch</div>
+									</div>
+								</div>
+							</div>
+							<div class="user-about">
+								<div class="user-about__text typography">
+									<p><strong>Hey. Meine süßen.</strong><br>
+										Mein Künstlername ist Mary Jane ich bin ein kleiner Hippie  und knackige 24 Jahre alt. zurzeit lebe ich ganz Frei über die warmen Monate in meinem kleinen Wohnmobil und bereise ganz Deutschland und ich genieße gerade meine Freiheit und die Abenteuer die mit dieser Reise verbunden mit MDH daher gehen ;*</p>
+									<p><strong>Bin noch ganz neu hier,</strong><br>
+										Und ich bin gespannt was mich hier alles erwartet, vielleicht lerne ich hier sogar jemanden ganz besonderen kennen, mit dem ich mich, meine Träume und Phantasien ausleben kann *_* </p>
+									<p>Ich komme aus einer sehr unglücklichen & langweiligen langjährigen Beziehung in der ich viel zu lange steckte, Jetzt habe ich so ein starkes Bedürfnis meine verlohrenen Jahre nachzuholen. Was mit MDH nun hoffentlich möglich sein wird  ;* </p>
+									<p>Also wenn ihr mich kennenlernen wollte habt keine Scheu und schreibt mir einfach :* Ps: Videos auf meiner Seite folgen noch , aber es fehlt leider noch der richtige Dreh Partner :/</p>
+								</div>
+							</div>
+							<div class="user-product">
+								<h2 class="user-product__block-title">Meine produkte</h2>
+								<div class="user-product__list-item">
+									<div class="user-product__item">
+										<article class="product-card">
+											<figure class="product-card__media">
+												<img src="images/demo/product-image-1.jpg" alt="">
+											</figure>
+											<div class="product-card__body">
+												<a href="#" class="product-card__title">Slip getragen</a>
+												<div class="product-card__price">15,00 €</div>
+											</div>
+										</article>
+									</div>
+									<div class="user-product__item">
+										<article class="product-card">
+											<figure class="product-card__media">
+												<img src="images/demo/product-image-2.jpg" alt="">
+											</figure>
+											<div class="product-card__body">
+												<a href="#" class="product-card__title">Black String - getragen</a>
+												<div class="product-card__price">24,00 €</div>
+											</div>
+										</article>
+									</div>
+									<div class="user-product__item">
+										<article class="product-card">
+											<figure class="product-card__media">
+												<img src="images/demo/product-image-1.jpg" alt="">
+											</figure>
+											<div class="product-card__body">
+												<a href="#" class="product-card__title">Slip getragen</a>
+												<div class="product-card__price">15,00 €</div>
+											</div>
+										</article>
+									</div>
+									<div class="user-product__item">
+										<article class="product-card">
+											<figure class="product-card__media">
+												<img src="images/demo/product-image-2.jpg" alt="">
+											</figure>
+											<div class="product-card__body">
+												<a href="#" class="product-card__title">Black String - getragen</a>
+												<div class="product-card__price">24,00 €</div>
+											</div>
+										</article>
+									</div>
+								</div>
+							</div>
+							<div class="featured-users">
+								<h2 class="featured-users__block-title">ähnliche Mädchen</h2>
+								<div class="featured-users__list">
+									<div class="featured-users__item">
+										<div class="featured-user">
+											<div class="featured-user__media">
+												<img class="featured-user__image" src="images/demo/vendor-image-1.jpg" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="featured-users__item">
+										<div class="featured-user">
+											<div class="featured-user__media">
+												<img class="featured-user__image" src="images/demo/vendor-image-2.jpg" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="featured-users__item">
+										<div class="featured-user">
+											<div class="featured-user__media">
+												<img class="featured-user__image" src="images/demo/vendor-image-3.jpg" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="featured-users__item">
+										<div class="featured-user">
+											<div class="featured-user__media">
+												<img class="featured-user__image" src="images/demo/user-image-square-small-1.jpg" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="featured-users__item">
+										<div class="featured-user">
+											<div class="featured-user__media">
+												<img class="featured-user__image" src="images/demo/user-square-image-1.jpg" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="featured-users__item">
+										<div class="featured-user">
+											<div class="featured-user__media">
+												<img class="featured-user__image" src="images/demo/user-square-image-3.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+
+		<footer class="site__footer footer">
+			<div class="footer__top footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="footer-top__left">
+							<a href="#" class="footer__logo footer-logo">
+								<img src="images/alienmaedchen-footer-logo.svg" alt="" class="footer-logo__image" width="100">
+							</a>
+						</div>
+						<div class="footer-top__right">
+							<div class="footer__contact footer-contact">
+								<div class="footer-contact__item">
+									<div class="footer-contact__item-title">phone</div>
+									<div class="footer-contact__item-content">
+										<a class="footer__link" href="tel:+49030123456789">+49(0)30-123456789</a>
+									</div>
+								</div>
+								<div class="footer-contact__item">
+									<div class="footer-contact__item-title">mail</div>
+									<div class="footer-contact__item-content">
+										<a class="footer__link" href="mailto:mailcontact@alienmaedchen.com">mailcontact@alienmaedchen.com</a>
+									</div>
+								</div>
+								<div class="footer-contact__item">
+									<div class="footer-contact__item-title">social media</div>
+									<div class="footer-contact__item-content">
+										<a class="footer-contact__link footer__link" href="#">Facebook</a>
+										<a class="footer-contact__link footer__link" href="#">Instagram</a>
+										<a class="footer-contact__link footer__link" href="#">Twitter</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__main footer-main">
+				<div class="container">
+					<div class="row">
+						<div class="footer-main__left">							
+							<nav class="footer__menu footer-menu">
+								<ul class="footer-menu__list list">
+									<li class="footer-menu__item">
+										<a href="#" class="footer-menu__link">Sitemap</a>
+									</li>
+									<li class="footer-menu__item">
+										<a href="#" class="footer-menu__link">Über das Portal / News</a>
+									</li>
+									<li class="footer-menu__item">
+										<a href="#" class="footer-menu__link">Neu hier?</a>
+									</li>
+									<li class="footer-menu__item">
+										<a href="#" class="footer-menu__link">FAQ</a>
+									</li>
+									<li class="footer-menu__item">
+										<a href="#" class="footer-menu__link"></a>
+									</li>
+									<li class="footer-menu__item">
+										<a href="#" class="footer-menu__link">Die Mädchen</a>
+									</li>
+									<li class="footer-menu__item">
+										<a href="#" class="footer-menu__link">Der Shop</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+
+						<div class="footer-main__right">
+							<div class="footer__information footer-information">
+								<p>alienmaedchen.de © Copyright 2020 MG Social Ltd. | Trademarks MG Licensing Europe S.à.r.l.</p></br>
+								<p>Diese Seite wird betrieben von MG Social Limited. Registrierte Adresse: Block 1, 195-197 Old Nicosia-Limassol Road, Dali Industrial zone, Cyprus 2540.</p></br>
+								<p>Mydirtyhobby ist die weltweit größte Amateur-Community. Momentan sind 8.201 Mitglieder online. Du findest insgesamt 516.634 Videos und 5.040.486 Bilder.</p>
+								<p>In den letzten 48 Stunden sind 385 neue Videos und 2.529 neue Bilder hinzugekommen</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__copyright footer-copyright">
+				<div class="container">
+					<div class="footer-copyright__text">
+						© 2020 Alienmaedchen GmbH.
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<div class="site__popup">
+
+	<div class="popup-login" id="popup-login">
+		<div class="popup-login__container">
+
+			<header class="popup-login__header">
+				<div class="popup-login__logo">
+					<img src="images/alienmaedchen-logo.png" alt="">
+				</div>
+				<div class="popup-login__header-msg">
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum magna aliquyam erat, sed diam voluptua. 
+				</div>
+				<button class="popup-close js-popup-close"><span>х</span></button>
+			</header>
+
+			<div class="popup-login__body">
+				<div class="popup-login__form">
+					<div class="popup-login__form-title">Einloggen um Alienmaedchen zu werden</div>
+					
+					<form class="form popup-form" autocomplete="off">
+						<div class="form__row">
+							<input class="input" type="text" name="popup-form-user-name" id="popup-form-user-name" placeholder="Benutzername">
+						</div>
+						<div class="form__row">
+							<input class="input" type="password" name="popup-form-password" id="popup-form-password" placeholder="Passwort">
+						</div>
+						<div class="form__row">
+							<button class="form__button">Login</button>
+							<a class="form__paswrd-rst-link" href="#">Passwort Vergessen?</a>
+						</div>
+					</form>
+
+					<div class="popup-login__reg-container">
+						<div class="popup-login__reg-title">Noch keinen Account?</div>
+						<a class="popup-login__reg-link" href="#">kostenlos registrieren</a>
+					</div>
+				</div>
+				<div class="popup-login__media">
+					<img src="images/demo/popup-media-image.jpg" alt="" class="popup-login__image">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	</div>
+
+	<script src="js/vendor.js"></script>
+	<script src="js/main.js"></script>
+	</body>
+
+</html>
