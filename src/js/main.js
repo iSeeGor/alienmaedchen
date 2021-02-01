@@ -3,6 +3,7 @@ $(function() {
 	accordion();
 	popupInit();
 	mobileMenu();
+	dashboardPage();
 });
 
 const accordion = () => {
@@ -59,4 +60,12 @@ const mobileMenu = () => {
 		}
 
 	}
+}
+
+const dashboardPage = () => {
+
+	$(document).on('click', '.js-dashboard-nav-button', function(){
+			
+		$(this).toggleClass('_active').siblings().slideToggle();
+	})
 }

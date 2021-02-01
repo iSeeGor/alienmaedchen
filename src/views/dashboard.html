@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>Alienmaedchen</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!--== Preload Fonts -->
+	<link rel="preload" href="fonts/AmaticSC-Bold.woff2" as="font" type="font/woff" crossorigin="">
+	<link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff" crossorigin="">
+
+	<!--== favicon  -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="stylesheet" href="css/vendor.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="body">
+	<div class="site">
+
+		<header class="site__header header dashboard-header">
+			<div class="container">
+				<div class="header__row">
+					<div class="header__logo header-logo">
+						<a href="/" class="header-logo__link"><img src="images/alienmaedchen-logo.png" alt="" class="header-logo__image" width="64"></a>
+					</div>
+
+					<nav class="dashboard-nav dashboard-header__nav">
+						<button class="dashboard-nav__button button-deco js-dashboard-nav-button">
+							<svg class="icon _lock">
+								<use xlink:href="symbol/sprite.svg#lock"></use>
+							</svg>
+							Stacy Standford
+							<svg class="layer-bg">
+								<use xlink:href="symbol/sprite.svg#button-deco-second"></use>
+							</svg>
+						</button>
+
+						<ul class="dashboard-nav__list list">
+							<li class="dashboard-nav__item">
+								<a href="#" class="dashboard-nav__link">Profil Bearbeiten</a>
+							</li>
+							<li class="dashboard-nav__item">
+								<a href="#" class="dashboard-nav__link">Konto & Zahlungen</a>							
+							</li>
+							<li class="dashboard-nav__item">
+								<a href="#" class="dashboard-nav__link">Statistiken </a>							
+							</li>
+							<li class="dashboard-nav__item">
+								<a href="#" class="dashboard-nav__link">Weitere Einstellungen</a>							
+							</li>
+
+							<li class="dashboard-nav__item">
+								<a href="#" class="dashboard-nav__link">Logout</a>							
+							</li>
+						</ul>
+					</nav>
+				</div>	
+			</div>
+		</header>
+
+		<div class="site__page page profile-page dashboard-page">
+			<header class="profile-page__header pp-header">
+				<div class="pp-header__container container">
+					<div class="pp-header__top">
+						<div class="pp-header__user-head-gallery user-head-gallery">
+							<div class="user-head-gallery__item">
+								<img src="images/demo/user-square-image-1.jpg" alt="">
+							</div>
+
+							<div class="pp-header__deco-heading deco-heading">
+								<h1 class="deco-heading__title">Stacy StandforD</h1>
+								<div class="deco-heading__subtitle">Profil bearbeiten</div>
+								<img class="deco-heading__bg" src="images/page-header-deco.svg" alt="" width="615">
+							</div>
+						</div>
+
+						<div class="pp-header__content">
+							<nav class="pp-nav">
+								<div class="pp-nav__list">
+									<a href="#" class="pp-nav__link">Neueste Blogs</a>
+									<a href="#" class="pp-nav__link">Top 10</a>
+									<a href="#" class="pp-nav__link">Eigener Blog</a>
+									<a href="#" class="pp-nav__link">Eigener Shop</a>
+								</div>
+							</nav>
+
+							<div class="post-editor">
+								<header class="post-editor__header">
+									<button class="post-editor__button">
+										<img src="icons/pen.png" alt="">
+									</button>
+									<button class="post-editor__button">
+										<img src="icons/microfone.png" alt="">
+									</button>
+									<button class="post-editor__button">
+										<img src="icons/photo.png" alt="">
+									</button>
+								</header>
+								<div class="post-editor__content">
+									<h2 class="post-editor__title">Dein heutiger Diaryeintrag - Titel....</h2>
+									<div class="post-editor__typography typography">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+										<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit dolor in reprehenderit in voluptate.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<img class="pp-header__clouds-deco" src="images/layer-clouds-secondary.png" alt="" >
+				</div>
+			</header>
+			
+			<main class="dashboard-page__main pp-main">
+				<div class="pp-main__container container">
+					<div class="pp-main__row">
+						<div class="pp-main__content _secondary">
+							<div class="user-shop">
+								<h2 class="user-shop__block-title">Aus der Suche nach Realität <br>Besuch unseren intimen Shop</h2>							
+								<div class="user-shop__list">
+									<div class="user-shop__item">
+										<div class="user-shop__item-media">
+											<img src="images/demo/user-image-square-small-1.jpg" alt="">
+										</div>
+										<a href="@" class="user-shop__item-link">Das immer feuchte Höschen aus dem Blogbeitrag vom 12/02/2020</a>
+									</div>
+									<div class="user-shop__item">
+										<div class="user-shop__item-media">
+											<img src="images/demo/user-image-square-small-1.jpg" alt="">
+										</div>
+										<a href="@" class="user-shop__item-link">Das Höschen vom Spaziergang heute früh von MEMBERNAME</a>
+									</div>
+									<div class="user-shop__item">
+										<div class="user-shop__item-media">
+											<img src="images/demo/user-image-square-small-1.jpg" alt="">
+										</div>
+										<a href="@" class="user-shop__item-link">Das immer feuchte Höschen aus dem Blogbeitrag vom 12/02/2020</a>
+									</div>
+								</div>
+							</div>
+						</div>					
+						<div class="pp-main__content _main">
+							<div class="user-posts">
+								<div class="user-posts__list">
+									<div class="user-posts__item">
+										<article class="post-card _textonly">
+											<div class="post-card__inner">
+												<div class="post-card__date">
+													05/08
+													<span class="_year">2020</span>
+												</div>
+												<div class="post-card__content">
+													<h2 class="post-card__title">Das kann eine Headline sein zum Blogbeitrag</h2>
+													<p class="post-card__excerpt">
+														Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+													</p>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="user-posts__item">
+										<article class="post-card _photo">
+											<header class="post-card__header">
+												<h2 class="post-card__title">Membername</h2>
+												<div class="post-card__date">21/04/2021</div>
+											</header>
+											<figure class="post-card__media">
+												<span class="post-card__badge">NEW</span>
+												<img src="images/demo/user-image-1.jpg" alt="">
+												<figcaption class="post-card__media-text">Das kann eine Headline sein zum Bild sein</figcaption>
+											</figure>
+										</article>
+									</div>
+									<div class="user-posts__item">
+										<article class="post-card _audio">
+											<div class="post-card__inner">
+												<div class="post-card__type">
+													<span class="icon-play"></span>
+												</div>
+												<div class="post-card__content">
+													<h2 class="post-card__title">Membername</h2>
+													<div class="post-card__date">14/12/2020</div>
+												</div>
+												<div class="post-card__track">
+													
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="user-posts__item">
+										<article class="post-card _price">
+											<div class="post-card__inner">
+												<div class="post-card__media">
+													<img src="images/demo/user-image-square-small-1.jpg" alt="" class="post-card__image">
+												</div>
+												<div class="post-card__content">
+													<h2 class="post-card__title">Neues Höschen</h2>
+													<p class="post-card__excerpt">
+														Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, sequi minus nulla laborum, illum earum eveniet quaerat quisquam libero laboriosam ratione est ut facere, voluptas dolorem totam voluptatibus voluptates dolore.
+													</p>
+													<a class="post-card__link button-deco" href="#">
+														NUR 15,- €
+														<svg class="layer-bg">
+															<use xlink:href="symbol/sprite.svg#button-deco-second"></use>
+														</svg>
+													</a>
+
+													<div class="post-card__desrc">Jetzt kaufen in unserem Shop</div>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="user-posts__item">
+										<article class="post-card _textonly">
+											<div class="post-card__inner">
+												<div class="post-card__date">
+													05/08
+													<span class="_year">2020</span>
+												</div>
+												<div class="post-card__content">
+													<h2 class="post-card__title">Das kann eine Headline sein zum Blogbeitrag</h2>
+													<p class="post-card__excerpt">
+														Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+													</p>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="user-posts__item">
+										<article class="post-card _photo">
+											<header class="post-card__header">
+												<h2 class="post-card__title">Membername</h2>
+												<div class="post-card__date">21/04/2021</div>
+											</header>
+											<figure class="post-card__media">
+												<span class="post-card__badge">NEW</span>
+												<img src="images/demo/user-image-1.jpg" alt="">
+												<figcaption class="post-card__media-text">Das kann eine Headline sein zum Bild sein</figcaption>
+											</figure>
+										</article>
+									</div>
+								</div>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</main>
+		</div>
+
+@@include('layouts/footer.html')
