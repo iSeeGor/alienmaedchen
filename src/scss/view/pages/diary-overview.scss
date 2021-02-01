@@ -153,6 +153,13 @@
 }
 
 @include _1240 {
+	.page-header {
+		height: auto;
+
+		&__container {
+			min-height: 100vh;
+		}
+	}
 	
 	.deco-head {
 		
@@ -193,5 +200,11 @@
 				width: 460px;
 			}
 		} 
+	}
+}
+
+@media (max-height: 540px) {
+	.deco-head {
+		margin-bottom: 100px;
 	}
 }

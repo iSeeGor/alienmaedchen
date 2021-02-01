@@ -295,6 +295,10 @@
 }
 
 @include _768 {
+
+	.new-user-guide__steps-block._step-one, .new-user-guide__steps-block._step-two {
+		margin-bottom: 80px;
+	}
 	
 	.new-user-guide__steps-block._step-three .new-user-guide__block-image {
 
@@ -307,6 +311,14 @@
 	.new-user-guide__steps-block._step-three .new-user-guide__block-num {
 		bottom: 135px;
 		left: 295px;
+	}
+
+	.new-user-guide, {
+		padding-bottom: 120px;
+	}
+
+	.new-user-guid-page .cta-section {
+		margin-bottom: 120px;
 	}
 }
 

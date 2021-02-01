@@ -141,8 +141,8 @@
 }
 
 .burger-button {
-	height: 80px;
-  	width: 80px;
+	height: 60px;
+  	width: 60px;
 	padding: 0;
 	margin: 0;
 	border: none;
@@ -266,6 +266,7 @@
 	.header {
 		background: $colorArctic;
 		z-index: 2;
+		position: fixed;
 
 		&__row {
 			justify-content: space-between;
@@ -274,13 +275,15 @@
 
 		&__menu {
 			position: absolute;
-			top: 80px;
+			top: 60px;
 			background: white;
 			left: 0;
     		width: 100%;
 			display: none;
 			// height: calc(100vh - 80px);
 			padding-bottom: 60px;
+			height: 100vh;
+    		overflow: auto;
 
 		}
 
@@ -323,6 +326,6 @@
 
 	.burger-button {
 		display: block;
-		margin-right: -20px;
+		margin-top: -20px;
 	}
 }

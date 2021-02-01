@@ -134,11 +134,14 @@
 
 	
 }
+.main-home {
+	background: url('../images/front-page-main-bg.jpg') no-repeat;
+	background-position: top -110px center;
+}
 
 .vendors-front {
 	padding-bottom: 210px;
-	background: url('../images/front-page-main-bg.jpg') repeat;
-	background-position: bottom -20px center;
+
 
 	&__grid {
 		margin-bottom: 75px;
@@ -245,6 +248,17 @@
 		clear: both;
 	}
 }
+@media (min-width: 1000px) and (max-width: 1240px){
+
+	.main-home {
+		.vendors-grid__item:nth-child(22) {
+			width: calc((var(--containerWidth) - (var(--margin) * (var(--columns) - 1 ) * 2 )) / var(--columns));
+			height: calc((var(--containerWidth) - (var(--margin) * (var(--columns) - 1 ) * 2 )) / var(--columns));
+		}
+	}
+
+}
+
 
 .vendor-card-text {
 
@@ -549,10 +563,17 @@
 @include _1240 {
 
 	.hero {
-		height: 840px;
+		height: auto;
+	}
+
+	.hero__row {
+		min-height: 100vh;
 	}
 	
 	.hero-content {
+		margin-top: 0;
+		padding-top: 140px;
+		padding-bottom: 100px;
 
 		&__header {
 
@@ -586,7 +607,7 @@
 	}
 
 	.cta-section._front-page {
-		padding: 200px 0;
+		padding: 100px 0;
 	}
 
 	.cta {
@@ -656,10 +677,6 @@
 
 @include _580 {
 	
-	.hero {
-		height: 840px;
-	}
-	
 	.hero-content {
 
 		&__header {
@@ -677,6 +694,11 @@
 		&__subtitle {
 
 			font-size: 32px;
+		}
+
+		&__text-content {
+			font-size: 16px;
+			line-height: 20px;
 		}
 		
 	}
